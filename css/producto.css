@@ -1,0 +1,373 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family: Helvetica Neue; 
+}
+
+body {
+        background: #F7F9F9  ;
+    background-size: cover;
+    background-attachment: fixed;
+        font-family: Helvetica Neue;
+
+}
+
+
+footer{
+	background: rgb(0,0,0, .4);
+	margin-top: 0px;
+	padding: 15px;
+	color: #fff;
+
+	width: 100% auto;
+	text-align: center;
+}
+
+
+div.contenedor{
+	width: 200px;
+	height: 50px;
+	float:left;
+	-webkit-transition: height .4s;
+}
+
+
+
+img.icon{
+	display: block;
+	margin:8px auto;
+	background-color: rgba(255,255,255,.15);
+	width:20px;
+	padding:5px;
+	-webkit-border-radius: 50%;
+	-webkit-box-shadow: 0px 0px 0px 30px rgba(255,255,255,0);
+	-webkit-transition:box-shadow .6s;
+}
+
+p.texto{
+	font-size: 1.2em;
+	color:white;
+    font-size: 13px;
+	text-align: center;
+	padding-top:1px;
+	opacity: .0;
+	-webkit-transition: padding-top .4s;
+}
+
+div.contenedor:hover{
+	height:70px;
+	width: 200px;
+}
+
+div.contenedor:hover p.texto{
+	padding-top: 2px;
+	opacity: 1;
+    -webkit-transition: opacity .6s;
+}
+
+div.contenedor:hover img.icon{
+	-webkit-box-shadow:0px 0px 0px 0px rgba(255,255,255,.6);
+}
+
+/*.logo{
+ 
+  margin-bottom: 0px;
+  margin-top: 10px;
+  margin:0px;
+   z-index: 1999;
+ 
+}
+.hr_logo{
+
+background-color: rgb(233,147,26);
+
+border:solid 1.1px rgb(208,101,3);
+
+
+}*/
+
+
+.contenedor-form {
+    background: rgba(0,0,0,.7);
+    max-width: 500px;
+    width: 100%;
+    margin: 48px auto;
+    margin-top: 90px;
+    border-radius: 5px;
+    color: #fff;
+    position: relative;
+    /*padding: 40px;*/
+}
+
+.contenedor-form .toggle {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: center;
+    border-top: 1px solid rgb(232,129,9);
+    border-bottom: 1px solid rgb(232,129,9);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.contenedor-form .toggle:hover {
+    border-top: 1px solid rgb(166,14,0);
+    border-bottom: 1px solid rgb(166,14,0);
+}
+
+.contenedor-form .toggle span {
+    letter-spacing: 1px;
+}
+
+.contenedor-form h2 {
+    margin: 0 0 28px 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+.contenedor-form input[type="text"],
+.contenedor-form input[type="password"],
+.contenedor-form input[type="email"] {
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 0 0 20px 0;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    border-bottom: 2px solid rgb(214,52,0);
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight:normal;
+    transition: all .5s ease;
+}
+
+.contenedor-form input[type="text"]:focus,
+.contenedor-form input[type="password"]:focus,
+.contenedor-form input[type="email"]:focus {
+    border-bottom: 2px solid rgb(166,14,0);
+}
+
+.contenedor-form input[type="submit"] {
+    background: rgb(214,52,0);
+    color: #FFF;
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.contenedor-form input[type="submit"]:hover {
+    background: rgb(232,129,9, 0.7);
+}
+
+.contenedor-form .reset-password {
+    background: rgb(232,129,9, .7);
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.contenedor-form .reset-password a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.contenedor-form .formulario {
+    display: none;
+    padding: 40px;
+}
+
+.contenedor-form .formulario:nth-child(2) {
+    display: block;
+}
+
+
+.contenedor-alfa{
+    background: rgb(255,255,255);
+    margin:20px auto;
+    height: 730px;
+    width:1160px;
+    padding: 20px;
+
+}
+
+
+.navigation-alfa{
+    background: rgb(255,255,255, .4);
+    margin:20px auto;
+    height: 20px;
+    width:1180px;
+    padding: 10px;
+
+
+}
+
+.navigation-alfa1 a{
+text-decoration:none;
+color: #000;    
+
+}
+.navigation-alfa p{
+float: left;
+}
+.navigation-alfa1 .add{
+    margin-left: 800px;
+    background: rgb(255,194,13);
+    border-radius: 7px;
+    padding: 5px;
+    margin-top: -5px;
+}
+
+
+ 
+
+
+
+div.contenedor-peq{
+    margin:15px;
+    width:250px;
+    height:260px;
+    margin-left: 22px;
+    background-color: white;
+    overflow: hidden;
+    float: left;
+    border-radius: 4px; 
+}
+
+div.imagen{
+    margin:auto;
+    background-color: #fff;
+    overflow: hidden;
+    -webkit-transition: height .4s;
+}
+
+img.imagen{
+    display: block;
+    margin:20px auto;
+    width:200px;
+    height:180px;
+    -webkit-transition: margin-top .2s;
+}
+
+div.info{
+    width:250px;
+    height:0px;
+    background-color:rgb(214,52,0, .8);
+    overflow: hidden;
+    -webkit-transition: height .4s;
+}
+div.info1{
+    width:250px;
+    height:30px;
+    background-color:rgb(214,52,0, .8);
+    margin-top: 10px;
+}
+
+p.titulo{
+    margin:1px;
+    font-size: 1.1em;
+    color:#fff;
+    text-align: center;
+}
+
+a.link{
+    margin-top:-25px;
+    margin-left: 80px;
+    padding:5px 15px;
+    background-color:rgb(255,170,10, .8);
+    font-size: .8em;
+    color:white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+a.link2{
+    margin-top:-25px;
+    margin-left: 25px;
+    padding:5px 15px;
+    background-color:rgb(255,170,10, .8);
+    font-size: .8em;
+    color:white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+
+div.contenedor-peq:hover div.imagen{
+    margin-top: 10px;
+    height: 140px;
+}
+
+div.contenedor-peq:hover div.info{
+    height:70px;/*dentro de deslizamiento*/
+}
+
+div.contenedor-peq:hover img.imagen{
+
+    margin-top:-50px;
+
+}
+
+.tabla table{
+    margin: 50px auto;
+    width: 1000px;
+    text-align: center;
+}
+
+.tabla table td{
+
+    border:1px solid rgb(255,170,10);
+    padding: 10px;
+}
+
+.tabla table h5{
+    margin: 10px;
+    color: #000;
+    font-size: 15px;
+ 
+}
+table .titee{
+    background: #cecece;
+}
+
+table input[type="button"] {
+    background: rgb(214,52,0, .7);
+    padding: 10px;
+    border:0px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+table input[type="button"]:hover {
+    background: rgb(214,52,0, .6);
+    color: white;
+    cursor: pointer;
+
+}
+table .cerrada{
+    background: green;
+}
+table .recibido{
+    background: orange;
+}
+
+
+
+
+
+
+
+

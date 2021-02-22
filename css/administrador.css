@@ -1,0 +1,320 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family: Helvetica Neue; 
+}
+
+/*titulo*/
+
+div#titulo{
+    margin-left: 30%;
+	width:70%;
+	margin-top:50px;
+}
+
+p#header{
+	text-align: center;
+	font-size: 2.5em;
+	color:black;
+}
+
+p#subheader{
+	text-align: center;
+	color:black;
+	
+	font-size: 1.3em;
+
+}
+
+footer{
+	background: rgb(0,0,0, .4);
+	margin-top: 50px;
+	padding: 15px;
+	color: #fff;
+	width: 100% auto;
+	text-align: center;
+}
+
+
+div.contenedor{
+	width: 200px;
+	height: 230px;
+	float:left;
+	-webkit-transition: height .4s;
+}
+
+div#uno{
+	background-color: rgb(255,194,13, .7);
+}
+div#uno a{
+    text-decoration: none;
+}
+div#dos{
+	background-color: rgb(255,170,10, .7);
+}
+div#dos a{
+    text-decoration: none;
+}
+
+div#tres{
+	background-color: rgb(232,129,9, .7);
+}
+div#tres a{
+    text-decoration: none;
+}
+div#cuatro{
+	background-color: rgb(208,101,3, .7);
+}
+div#cuatro a{
+    text-decoration: none;
+}
+
+div#cinco{
+	background-color: rgb(214,52,0, .7);
+}
+
+div#cinco a{
+    text-decoration: none;
+}
+
+div#seis{
+	background-color: rgb(166,14,0, .7);
+}
+div#seis a{
+    text-decoration: none;
+}
+
+img.icon{
+	display: block;
+	margin:50px auto;
+	background-color: rgba(255,255,255,.15);
+	width:40px;
+	padding:20px;
+	-webkit-border-radius: 50%;
+	-webkit-box-shadow: 0px 0px 0px 30px rgba(255,255,255,0);
+	-webkit-transition:box-shadow .6s;
+}
+
+p.texto{
+	font-size: 1.2em;
+	color:white;
+	text-align: center;
+	padding-top:10px;
+	opacity: .6;
+	-webkit-transition: padding-top .4s;
+}
+
+div.contenedor:hover{
+	height:265px;
+	width: 215px;
+}
+
+div.contenedor:hover p.texto{
+	padding-top: 30px;
+	opacity: 1;
+}
+
+div.contenedor:hover img.icon{
+	-webkit-box-shadow:0px 0px 0px 0px rgba(255,255,255,.6);
+}
+
+.logo{
+  margin-left: 30%;
+  width: 70%;
+  margin-top: 100px;
+  margin-bottom: 0px;
+   z-index: 1999;
+ 
+}
+.hr_logo{
+
+background-color: rgb(233,147,26);
+
+border:solid 1.1px rgb(208,101,3);
+
+
+}
+
+
+.contenedor-form {
+    background: rgba(0,0,0,.7);
+    max-width: 500px;
+    width: 100%;
+    margin: 48px auto;
+    margin-top: 90px;
+    border-radius: 5px;
+    color: #fff;
+    position: relative;
+    /*padding: 40px;*/
+}
+
+.contenedor-form .toggle {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+    line-height: 25px;
+    text-align: center;
+    border-top: 1px solid rgb(232,129,9);
+    border-bottom: 1px solid rgb(232,129,9);
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.contenedor-form .toggle:hover {
+    border-top: 1px solid rgb(166,14,0);
+    border-bottom: 1px solid rgb(166,14,0);
+}
+
+.contenedor-form .toggle span {
+    letter-spacing: 1px;
+}
+
+.contenedor-form h2 {
+    margin: 0 0 28px 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+}
+.contenedor-form input[type="text"],
+.contenedor-form input[type="password"],
+.contenedor-form input[type="email"] {
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 0 0 20px 0;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    border-bottom: 2px solid rgb(214,52,0);
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight:normal;
+    transition: all .5s ease;
+}
+
+.contenedor-form input[type="text"]:focus,
+.contenedor-form input[type="password"]:focus,
+.contenedor-form input[type="email"]:focus {
+    border-bottom: 2px solid rgb(166,14,0);
+}
+
+.contenedor-form input[type="submit"] {
+    background: rgb(214,52,0);
+    color: #FFF;
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.contenedor-form input[type="submit"]:hover {
+    background: rgb(232,129,9, 0.7);
+}
+
+.contenedor-form .reset-password {
+    background: rgb(232,129,9, .7);
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.contenedor-form .reset-password a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.contenedor-form .formulario {
+    display: none;
+    padding: 40px;
+}
+
+.contenedor-form .formulario:nth-child(2) {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

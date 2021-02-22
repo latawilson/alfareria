@@ -1,0 +1,225 @@
+﻿<?php
+	header('Content-Type: text/html; charset=ISO-8859-1');
+if (!isset($_SESSION)) {
+  session_start();
+}
+$MM_authorizedUsers = "";
+$MM_donotCheckaccess = "true";
+function isAuthorized($strUsers, $strGroups, $UserName, $UserGroup) { 
+
+  $isValid = False; 
+
+  if (!empty($UserName)) { 
+    $arrUsers = Explode(",", $strUsers); 
+    $arrGroups = Explode(",", $strGroups); 
+    if (in_array($UserName, $arrUsers)) { 
+      $isValid = true; 
+    } 
+
+    if (in_array($UserGroup, $arrGroups)) { 
+      $isValid = true; 
+    } 
+    if (($strUsers == "") && true) { 
+      $isValid = true; 
+    } 
+  } 
+  return $isValid; 
+}
+
+$MM_restrictGoTo = "loginres-adm.php";
+if (!((isset($_SESSION['MM_Username'])) && (isAuthorized("",$MM_authorizedUsers, $_SESSION['MM_Username'], $_SESSION['MM_UserGroup'])))) {   
+  $MM_qsChar = "?";
+  $MM_referrer = $_SERVER['PHP_SELF'];
+  if (strpos($MM_restrictGoTo, "?")) $MM_qsChar = "&";
+  if (isset($_SERVER['QUERY_STRING']) && strlen($_SERVER['QUERY_STRING']) > 0) 
+  $MM_referrer .= "?" . $_SERVER['QUERY_STRING'];
+  $MM_restrictGoTo = $MM_restrictGoTo. $MM_qsChar . "accesscheck=" . urlencode($MM_referrer);
+  header("Location: ". $MM_restrictGoTo); 
+  exit;
+}
+
+// ** Logout the current user. **
+$logoutAction = $_SERVER['PHP_SELF']."?doLogout=true";
+if ((isset($_SERVER['QUERY_STRING'])) && ($_SERVER['QUERY_STRING'] != "")){
+  $logoutAction .="&". htmlentities($_SERVER['QUERY_STRING']);
+}
+
+if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
+  //to fully log out a visitor we need to clear the session varialbles
+  $_SESSION['MM_Username'] = NULL;
+  $_SESSION['MM_UserGroup'] = NULL;
+  $_SESSION['PrevUrl'] = NULL;
+  unset($_SESSION['MM_Username']);
+  unset($_SESSION['MM_UserGroup']);
+  unset($_SESSION['PrevUrl']);
+
+  $logoutGoTo = "loginres-adm.php";
+  if ($logoutGoTo) {
+    header("Location: $logoutGoTo");
+    exit;
+  }
+}
+
+?>
+
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Administrador</title>
+	<link rel="stylesheet" href="css/style_admin.css">
+	<link rel="stylesheet" href="css/fonts1.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/administrador.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<div class="caer" style="background: #fff; width: 120px; height: 30px; padding: 5px; margin-left: 90%; border-radius: 10px;
+    position: absolute; margin-top: -95px; background-color: rgb(232,129,9, .7);">
+
+    	<a style="text-decoration: none;   color: #fff;" href="<?php echo $logoutAction ?>"><span style="margin-right: 10px;"class="icon-exit icon"></span>Cerrar Sesi&oacuten</a>
+   
+</div>
+<div class="logo">
+	    	      
+                 
+             <center>          <IMG src="images/logue.PNG" ></center>
+                  
+</div>
+<div id="titulo">
+		<p id="header">Administrador</p>
+		 <p id="subheader">El uso de esta seccion requiere de mucha responsabilidad.</p>	
+		    
+</div>
+<header>
+	<div class="menu_bar">
+		<a href="#" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+	</div>
+	<nav>
+		<ul>
+			<li><a  href="#"><span class="icon-tree icon"></span>Gesti&oacuten de desarrollo</a>
+			<ul >
+				<li><a  href="alfareria/alfarerias.php"><span class="icon-home icon"></span>Alfarer&iacutea</a></li>
+			    <li><a  href="producto/productos.php"><span class="icon-mug icon"></span>Producto</a></li>
+			    <li><a  href="administrador/administrador.php"><span class="icon-calendar icon"></span>Administrador</a></li>
+			    <li><a  href="usuario/lista_usuarios.php"><span class="icon-address-book icon"></span>Clientes</a></li>
+			</ul>
+			</li>
+			<li><a  href="administrador/pedido.php"><span class="icon-cart icon"></span>Pedidos</a></li>
+			<li><a  href="reporte_pdf/Reporte_pedido.php"><span class="icon-calendar icon"></span>Reporte</a></li>
+			<li><a  href="informe/informes.php"><span class="icon-wrench icon"></span>Informaci&oacuten</a></li>
+			<li><a  href="Promocion/promociones.php"><span class="icon-gift icon"></span>Promociones</a></li>
+			<li><a  href="index.php"><span class="icon-database icon"></span>Revisi&oacuten de Interfaz</a></li>
+
+		</ul>
+	</nav>
+</header>
+	   
+<!--
+	<header>
+		
+		<div class="contenedor" id="uno">
+			<a href="alfarerias.html">
+			<img class="icon" src="images/icon1.png">
+			<p class="texto">Alfarer&iacuteas</p></a>
+		</div>
+
+		<div class="contenedor" id="dos">
+			<a href="productos.html">
+			<img class="icon" src="images/icon2.png">
+			<p class="texto">Productos</p></a>
+		</div>
+
+		<div class="contenedor" id="tres">
+			<a href="pedidos.html">
+			<img class="icon" src="images/icon3.png">
+			<p class="texto">Pedidos</p></a>
+		</div>
+
+		<div class="contenedor" id="cuatro">
+			<a href="publicidad1.html">
+			<img class="icon" src="images/icon4.png">
+			<p class="texto">Publicidad</p></a>
+		</div>
+
+		<div class="contenedor" id="cinco">
+			<a href="reportes.html">
+			<img class="icon" src="images/icon5.png">
+			<p class="texto">Reportes</p></a>
+		</div>
+
+		<div class="contenedor" id="seis">
+			<a href="informacion-general.html">
+			<img class="icon" src="images/icon6.png">
+			<p class="texto">Informaci&oacuten</p></a>
+		</div>
+
+	</header>
+-->
+<footer>
+	 <div class="foot">
+          
+            <p>
+                        Copyright &copy; All rights reserved | Alfarerias La Victoria   <a href="index.html">Interfas de cliente</a>
+            
+            </p>
+      
+          
+        </div>
+</footer>
+
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
