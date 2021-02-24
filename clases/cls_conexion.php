@@ -3,10 +3,10 @@ class DBConexion
 {
 public $conexion;
 protected $db;
-private $host="localhost";
-private $usua="root";
-private $cla="";
-private $base="bd_ver1";
+private $host="alfareriabd.cn3hw4ruastd.us-east-2.rds.amazonaws.com";
+private $usua="bd_ver1";
+private $cla="admin";
+private $base="admin1234";
 	public function __construct()
 	{
 	$this->conexion = mysql_connect($this->host,$this->usua,$this->cla,$this->base);
