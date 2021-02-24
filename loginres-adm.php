@@ -70,8 +70,8 @@
             <h2>Iniciar Sesi&oacuten</h2>
             <form id="form1" name="form1" method="post" action="v_log1.php">
                 <input id="sprytextfield1"  name="txt_usuario"type="text" placeholder="Usuario" required>
-                <input id="sprypassword1" name="txt_clave" type="password" placeholder="Contrase&ntildea" required>
-                <input name="btn_ingresar" type="submit" value="Iniciar Sesi&oacuten">
+                <input id="sprypassword1" name="txt_clave" type="password" placeholder="Contraseña" required>
+                <input name="btn_ingresar" type="submit" value="Iniciar Sesion">
             </form>
         </div>
         

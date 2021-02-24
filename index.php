@@ -88,10 +88,22 @@
       </nav>
     </header>
 
-    <div class="site-blocks-cover" style="background-image: url(images/rendon10.jpg); " data-aos="fade">
+
+     <div class="site-section border-bottom" data-aos="fade">
       <div class="container">
-        <div class="row align-items-start align-items-md-center justify-content-end">
-          <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
+        <div class="row mb-5">
+          <div class="col-md-8">
+            <div class="block-16">
+              <figure>
+                <img src="images/rendon11.jpg" alt="Image placeholder" class="img-fluid rounded">
+                <a href="https://www.youtube.com/watch?v=qtyMMuo2ALU" class="play-button popup-vimeo"><span class="ion-md-play"></span></a>
+
+              </figure>
+            </div>
+          </div>
+      
+          <div class="col-md-4">
+            <div class="col-md-15 text-center text-md-left pt-5 pt-md-0">
             <h1 class="mb-2"> Encuentra tu artesan&iacutea en "La Victoria</h1>
             <div class="intro-text text-center text-md-left">
               <p class="mb-4">La mejor artesan&iacutea para su hogar está en "La Victoria", tenemos todo para su hogar, jard&iacuten, bases para sus arreglos florales al por mayor y al por menor.</p>
@@ -101,6 +113,7 @@
             </div>
           </div>
         </div>
+       
       </div>
     </div>
 
@@ -136,7 +149,7 @@
         <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
           <a class="block-2-item" href="jardin.php?id_clas=3">
             <figure class="image">
-              <img src="images/IMA12.jpg" alt="" class="img-fluid">
+              <img src="https://alfareria.herokuapp.com/images/IMA12.jpg" alt="" class="img-fluid">
             </figure>
             <div class="text">
               <h3 href="#">Jard&iacuten</h3>
@@ -193,28 +206,6 @@
   </div>
 </div>
 
-<!--
-    <div class="site-section block-8">
-      <div class="container">
-        <div class="row justify-content-center  mb-5">
-          <div class="col-md-7 site-section-heading text-center pt-4">
-            <h2>OFERTA!</h2>
-          </div>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-md-12 col-lg-7 mb-5">
-            <a href="#"><img src="images/OF2.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
-          </div>
-          <div class="col-md-12 col-lg-5 text-center pl-md-5">
-            <h2><a href="#">15% menos en todos los articulos para tu jard&iacuten </a></h2>
-            <p class="post-meta mb-4"> Febrero 3 asta abril 3, 2018</p>
-            <p>Todos los productos hasta agotar existencias con sus respectivas restricciones de cada Alfarerias.</p>
-            <p><a href="compras/tienda.php" class="btn btn-primary btn-sm">Ir a la Tienda</a></p>
-          </div>
-        </div>
-      </div>
-    </div>-->
-
     <div class="site-section site-section-sm site-blocks-1">
       <div class="container">
         <div class="row">
@@ -249,14 +240,7 @@
           <div class="col-lg-6 mb-5 mb-lg-0 ">
             <div class="row">
              <div class="col-md-6 col-lg-6">
-                  <!--        <form action="#" method="post">
-                            <label for="email_subscribe" class="footer-heading">Comentario</label>
-                <div class="form-group">
-                  <input type="text" class="form-control py-4" id="email_subscribe" placeholder="Email">
-                   <input type="text" class="form-control py-5" id="email_subscribe" placeholder="Comentario">
-                  <input type="submit" class="btn btn-sm btn-primary" value="Enviar">
-                </div>
-              </form>-->
+       
             </div>
             <div class="col-md-6 col-lg-6">
               <div class="block-5 mb-5">
@@ -282,7 +266,7 @@
         Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> Jefferson Moreno  ! Edgar Silva by <a>UTC</a>
       </p>
     </div>       
-    
+    asd
   </div>
 </footer>
 </div>

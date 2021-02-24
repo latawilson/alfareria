@@ -2,7 +2,7 @@
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
-  if (PHP_VERSION < 6) {
+  if (PHP_VERSION < 8) {
     $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
   }
 
@@ -38,6 +38,7 @@ if (isset($_POST['txt_usuario'])) {
   $MM_redirectLoginSuccess = "compras/perfil.php?usuario_cli=$loginUsername";
   $MM_redirectLoginFailed = "loginres2.php";
   $MM_redirecttoReferrer = false;
+ 
   mysql_select_db($database_cone, $cone);
  
   $LoginRS__query=sprintf("SELECT id_cli, usuario_cli, contrasenia_cli FROM cliente WHERE BINARY usuario_cli=%s AND BINARY contrasenia_cli=%s ",GetSQLValueString($loginUsername, "text"), GetSQLValueString($password, "text"),GetSQLValueString($nivel,"text"));

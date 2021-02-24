@@ -167,8 +167,26 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
           
         </div>
 </footer>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+	<script type="text/javascript">
+// Swal.fire({
+//   title: 'ngreso Correctamente',
+//   showClass: {
+//     popup: 'animate__animated animate__fadeInDown'
+//   },
+//   hideClass: {
+//     popup: 'animate__animated animate__fadeOutUp'
+//   }
+// })
 
-	
+Swal.fire(
+  'Administrador!',
+  'Bienvenido!',
+  'success'
+)
+
+</script>
 
 </body>
 </html>
