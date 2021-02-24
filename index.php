@@ -76,7 +76,7 @@
                 <li><a href="teja.php?id_clas=3">TEJA</a></li>
               </ul>
             </li>
-            <!-- <li><a href="contact.php">Contacto</a></li>-->
+  
             
             <li><a href="#"></a></li>
             <li><a href="#"></a></li>
