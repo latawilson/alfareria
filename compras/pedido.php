@@ -129,14 +129,15 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
               </ul>
             </li>
             <li class="has-children">
-              <a href="#">Alfarer&iacuteas</a>
+              <a href="../alfareria.php">Alfarer&iacuteas</a>
             </li>
             <li class="has-children">
               <a href="#">Galer&iacutea</a>
               <ul class="dropdown">
-                <li><a href="../decoracion.php">DECORACI&oacuteN </a></li>
-
-              </ul>
+              <li><a href="../decoracion.php?id_clas=2">DECORACI&oacuteN </a></li>
+              <li><a href="../jardin.php?id_clas=1">JARDINER&iacuteA </a></li>
+              <li><a href="../teja.php?id_clas=3">TEJA </a></li>
+            </ul>
             </li>
 
             <!--<li><a href="../contact.php">Contacto</a></li>-->

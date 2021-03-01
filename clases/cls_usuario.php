@@ -2,6 +2,7 @@
 require_once("cls_conexion.php");
 class usuario
 {
+	
 	function insertar($nombre_cli, $apellido_cli, $usuario_cli, $contrasenia_cli, $telefono_cli, $direccion_cli)
 	{
 		$conex=new DBConexion();

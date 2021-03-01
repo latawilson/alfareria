@@ -1,7 +1,9 @@
 <?php
 require_once("cls_conexion.php");
+// include ("conexion.php");
 class alfareria
 {
+	
 	function insertar($nombre_al,$direccion_al,$propietario_al,$descripcion_al,$telefono_al,$imagen_al)
 	{
 		$conex=new DBConexion();

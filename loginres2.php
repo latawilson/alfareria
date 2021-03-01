@@ -93,11 +93,10 @@
 
         <input name="usuario_cli" type="text" placeholder="Usuario" required>
 
-        <input name="contrasenia_cli" type="password" placeholder="Contrase&ntildea" required>
 
-        <input name="telefono_cli" type="text" placeholder="Tel&eacutefono" required>
+        <input name="telefono_cli" type="text" placeholder="Telefono" required>
 
-        <input name="direccion_cli" type="text" placeholder="Direcci&oacuten" required>
+        <input name="direccion_cli" type="text" placeholder="Direccion" required>
 
         <input type="submit" value="Registrarse">
       </form>

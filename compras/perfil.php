@@ -24,7 +24,6 @@ function isAuthorized($strUsers, $strGroups, $UserName, $UserGroup) {
     } 
   } 
   return $isValid; 
-
 }
 
 $MM_restrictGoTo = "../loginres1.php";
@@ -63,12 +62,18 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
 
 ?>
 
-
 <?php
 require_once("../clases/cls_usuario.php");
-$obj_cliente= new usuario();
-$row=$obj_cliente->consultarid_alp($_GET['usuario_cli']);
+$obj_alfareria= new usuario();
+$row=$obj_alfareria->consultarid_cli($_GET['id_cli']);
 ?>
+
+//<?php
+//require_once("../clases/cls_usuario.php");
+//$obj_cliente= new usuario();
+//$row=$obj_cliente->consultarid_cli($_GET['id_cli']);
+// $row=$obj_cliente->consultarid_alp($_GET['usuario_cli']);
+//?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,92 +186,114 @@ $row=$obj_cliente->consultarid_alp($_GET['usuario_cli']);
             Ver pedidos</button></a>
           </div>
 
-          <div class="col-md-4">
-            <!--  <div class="border p-4 rounded" role="alert"> -->
-              <center><a href="" ><i class="fa fa-user fa-fw"></i>Bienvenido:  <strong  style="text-transform: uppercase;" ><?php echo $_SESSION['MM_Username'];?> </strong></a></center>
+          <div class="border m-2  p-2 rounded" role="alert">
+            <center><a href="" ><i class="fa fa-user fa-fw"></i>  <strong  style="text-transform: uppercase;" ><?php echo $_SESSION['MM_Username'];?> </strong></a></center>
+            <?php
+            require_once("../blogueo.php");
+            if($estado){
+              ?><center>
+                <a style="margin-left: auto;  " href="<?php echo $logoutAction ?>"><button class="btn btn-primary btn-lg ">Cerrar Sesi&oacuten</button></a>
+              </center>
               <?php
-              require_once("../blogueo.php");
-              if($estado){
-                ?><center>
-                  <a style="margin-left: auto;  " href="<?php echo $logoutAction ?>"><button class="btn btn-primary btn-lg ">Cerrar Sesi&oacuten</button></a>
-                </center>
-                <?php
 
-              }else{
-               ?>
-
-               Soy Cliente! <a href="../loginres.php">Haga clic aqu&iacute </a> para ingresar
-
-               <?php
-             }
+            }else{
              ?>
-             <!-- </div> -->
+             
+             Soy Cliente! <a href="../loginres.php">Haga clic aqu&iacute </a> para ingresar
+             
+             <?php
+           }
+           ?>
+         </div>  
 
-           </div>
 
 
+         <div class="col-md-4">
+          <!--  <div class="border p-4 rounded" role="alert"> -->
+            <center><a href="" ><i class="fa fa-user fa-fw"></i>Bienvenido:  <strong  style="text-transform: uppercase;" ><?php echo $_SESSION['MM_Username'];?> </strong></a></center>
+            <?php
+              // require_once("../blogueo.php");
+            if($estado){
+              ?><center>
+                <a style="margin-left: auto;  " href="<?php echo $logoutAction ?>"><button class="btn btn-primary btn-lg ">Cerrar Sesi&oacuten</button></a>
+              </center>
+              <?php
+
+            }else{
+             ?>
+
+             Soy Cliente! <a href="../loginres.php">Haga clic aqu&iacute </a> para ingresar
+
+             <?php
+           }
+           ?>
+           <!-- </div> -->
 
          </div>
+
+
 
        </div>
 
      </div>
 
-     <div class="row">
-      <div class="col-md-12">
-        <h2 class="h3 mb-3 text-black" style=" margin-left: 350px; margin-right: -0px;" charset="utf-8"> INFORMACI&oacuteN DE USUARIO</h2>
-      </div>
-      <div class="col-md-7">
+   </div>
 
-        <form method="post" name="form1" action="editarUsuario.php"style=" margin-left: 150px; margin-right: -150px;"  >
-
-          <div class="p-3 p-lg-5 border">
-            <div class="form-group row">
-              <div class="col-md-6">
-                <label for="c_fname" class="text-black">Nombres <span class="text-danger">*</span></label>
-                <label type="text" class="form-control" id="c_fname" name="nombre_cli" ><?php echo($row['nombre_cli']); ?></label>
-              </div>
-              <div class="col-md-6">
-                <label for="c_lname" class="text-black">Apellidos <span class="text-danger">*</span></label>
-                <label type="text" class="form-control" id="c_lname" name="apellido_cli"><?php echo($row['apellido_cli']); ?></label>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="c_email" class="text-black">Usuario <span class="text-danger">*</span></label>
-                <label type="text" class="form-control" id="c_email" name="usuario_cli" ><?php echo($row['usuario_cli']); ?></label>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="c_subject" class="text-black">Contrase&ntildea </label>
-                <label type="password" class="form-control" id="c_subject" ><?php echo($row['contrasenia_cli']); ?></label>
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="c_message" class="text-black">Tel&eacutefono </label>
-                <label type="text" class="form-control" id="c_subject" name="telefono_cli" ><?php echo($row['telefono_cli']); ?></label>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-md-12">
-                <label for="c_message" class="text-black">Direcci&oacuten </label>
-                <label type="text" class="form-control" id="c_subject" name="direccion_cli" ><?php echo($row['direccion_cli']); ?></label>
-              </div>
-            </div>
-
-          </div>
-        </form>
-
-        <br>
-      </div>
-
-
-      
+   <div class="row">
+    <div class="col-md-12">
+      <h2 class="h3 mb-3 text-black" style=" margin-left: 350px; margin-right: -0px;" charset="utf-8"> INFORMACI&oacuteN DE USUARIO</h2>
     </div>
+    <div class="col-md-7">
+
+      <form method="post" name="form1" action="editarUsuario.php"style=" margin-left: 150px; margin-right: -150px;"  >
+
+        <div class="p-3 p-lg-5 border">
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="c_fname" class="text-black">Nombres <span class="text-danger">*</span></label>
+              <label type="text" class="form-control" id="c_fname" name="nombre_cli" ><?php echo($row['nombre_cli']); ?></label>
+            </div>
+            <div class="col-md-6">
+              <label for="c_lname" class="text-black">Apellidos <span class="text-danger">*</span></label>
+              <label type="text" class="form-control" id="c_lname" name="apellido_cli"><?php echo($row['apellido_cli']); ?></label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label for="c_email" class="text-black">Usuario <span class="text-danger">*</span></label>
+              <label type="text" class="form-control" id="c_email" name="usuario_cli" ><?php echo($row['usuario_cli']); ?></label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label for="c_subject" class="text-black">Contrase&ntildea </label>
+              <label type="password" class="form-control" id="c_subject" ><?php echo($row['contrasenia_cli']); ?></label>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label for="c_message" class="text-black">Tel&eacutefono </label>
+              <label type="text" class="form-control" id="c_subject" name="telefono_cli" ><?php echo($row['telefono_cli']); ?></label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-12">
+              <label for="c_message" class="text-black">Direcci&oacuten </label>
+              <label type="text" class="form-control" id="c_subject" name="direccion_cli" ><?php echo($row['direccion_cli']); ?></label>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+      <br>
+    </div>
+
+
+    
   </div>
+</div>
 </div>
 <footer class="site-footer border-top">
   <div class="container">
@@ -336,7 +363,7 @@ Swal.fire(
   'Buen Trabajo!',
   'Ingreso Correctamente!',
   'success'
-)
+  )
 
 </script>
 

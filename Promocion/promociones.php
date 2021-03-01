@@ -84,17 +84,20 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
           <IMG src="../images/logue.PNG"alt="Smiley face" height="140" width="130">
       </center>
    </div>
-   <div class="caer" style="background: #fff; width: 120px; height: 30px; padding: 5px; margin-left: 90%; border-radius: 10px;
-    position: absolute; margin-top: -95px; background-color: rgb(232,129,9, .7);">
 
-    	<a style="text-decoration: none;   color: #fff;" href="<?php echo $logoutAction ?>"><span style="margin-right: 10px;"class="icon-exit icon"></span>Cerrar Sesi&oacuten</a>
-   
-</div>
-
+<br>
    <div class="navigation-alfa1">
   <p><a href="../index_admin.php">Inicio </a> / <strong>Promociones</strong></p>
   <a href="crear-promocion.php"><p class="add"> <strong>+</strong>Agregar Promoci&oacuten </p></a>
    </div>
+   <br>
+
+      <div class="caer" style="background: #fff; width: 120px; height: 30px; padding: 5px; margin-left: 90%; border-radius: 10px;
+    position: absolute; margin-top: -95px; background-color: rgb(232,129,9, .7);">
+
+      <a style="text-decoration: none;   color: #fff;" href="<?php echo $logoutAction ?>"><span style="margin-right: 10px;"class="icon-exit icon"></span>Cerrar Sesi&oacuten</a>
+   
+</div>
  <header>
   <div class="menu_bar">
     <a href="#" class="bt-menu"><span class="icon-list2"></span>Menú</a>
