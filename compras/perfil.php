@@ -63,17 +63,17 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
 ?>
 
 <?php
-require_once("../clases/cls_usuario.php");
-$obj_alfareria= new usuario();
-$row=$obj_alfareria->consultarid_cli($_GET['id_cli']);
+// require_once("../clases/cls_usuario.php");
+// $obj_alfareria= new usuario();
+// $row=$obj_alfareria->consultarid_cli($_GET['id_cli']);
 ?>
 
-//<?php
-//require_once("../clases/cls_usuario.php");
-//$obj_cliente= new usuario();
-//$row=$obj_cliente->consultarid_cli($_GET['id_cli']);
+<?php
+require_once("../clases/cls_usuario.php");
+$obj_cliente= new usuario();
+$row=$obj_cliente->consultarid_cli($_GET['id_cli']);
 // $row=$obj_cliente->consultarid_alp($_GET['usuario_cli']);
-//?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -208,28 +208,6 @@ $row=$obj_alfareria->consultarid_cli($_GET['id_cli']);
 
 
 
-         <div class="col-md-4">
-          <!--  <div class="border p-4 rounded" role="alert"> -->
-            <center><a href="" ><i class="fa fa-user fa-fw"></i>Bienvenido:  <strong  style="text-transform: uppercase;" ><?php echo $_SESSION['MM_Username'];?> </strong></a></center>
-            <?php
-              // require_once("../blogueo.php");
-            if($estado){
-              ?><center>
-                <a style="margin-left: auto;  " href="<?php echo $logoutAction ?>"><button class="btn btn-primary btn-lg ">Cerrar Sesi&oacuten</button></a>
-              </center>
-              <?php
-
-            }else{
-             ?>
-
-             Soy Cliente! <a href="../loginres.php">Haga clic aqu&iacute </a> para ingresar
-
-             <?php
-           }
-           ?>
-           <!-- </div> -->
-
-         </div>
 
 
 
