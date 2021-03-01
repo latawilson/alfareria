@@ -31,7 +31,7 @@
 	<div class="log">
    	<br>
    	<center>
-          <IMG src="../images/logue.PNG"alt="Smiley face" height="140" width="130">
+          <IMG src="../images/logue.png"alt="Smiley face" height="140" width="130">
       </center>
    </div>
 

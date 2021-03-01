@@ -89,7 +89,7 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
 &ntilde = &ntilde; -->
   <!-- <div class="d-flex flex-column">
      <div>
-          <IMG src="../images/logue.PNG"alt="Smiley face" height="140" width="130" class="img-fluid icofont-rounded-up">
+          <IMG src="../images/logue.png"alt="Smiley face" height="140" width="130" class="img-fluid icofont-rounded-up">
 </div> -->
    <div class="menu_bar">
     <a href="#" class="bt-menu"><span class="icon-list2"></span>Menú</a>

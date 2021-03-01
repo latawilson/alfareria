@@ -9,7 +9,7 @@
 <body>
 	    <div class="logo">
 	    	<center>
-          <IMG src="../images/logue.PNG"alt="Smiley face" height="120" width="105">
+          <IMG src="../images/logue.png"alt="Smiley face" height="120" width="105">
       </center>
       </div>
       

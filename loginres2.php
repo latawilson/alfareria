@@ -33,7 +33,7 @@
 <body>
 
   <div class="logo">
-    <center><IMG src="images/logue.PNG"alt="Smiley face" height="130" width="115"></center>
+    <center><IMG src="images/logue.png"alt="Smiley face" height="130" width="115"></center>
   </div>
   <div class="site-navbar" role="banner">
    <nav class="site-navigation text-right text-md-center" role="navigation">

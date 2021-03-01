@@ -83,7 +83,7 @@ if ((isset($_GET['doLogout'])) &&($_GET['doLogout']=="true")){
 <div class="logo">
 	    	      
                  
-             <center>          <IMG src="images/logue.PNG" ></center>
+             <center>          <IMG src="images/logue.png" ></center>
                   
 </div>
 <div id="titulo">

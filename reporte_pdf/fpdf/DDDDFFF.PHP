@@ -1255,7 +1255,7 @@ protected function _parsejpg($file)
 
 protected function _parsepng($file)
 {
-	// Extract info from a PNG file
+	// Extract info from a png file
 	$f = fopen($file,'rb');
 	if(!$f)
 		$this->Error('Can\'t open image file: '.$file);
@@ -1267,13 +1267,13 @@ protected function _parsepng($file)
 protected function _parsepngstream($f, $file)
 {
 	// Check signature
-	if($this->_readstream($f,8)!=chr(137).'PNG'.chr(13).chr(10).chr(26).chr(10))
-		$this->Error('Not a PNG file: '.$file);
+	if($this->_readstream($f,8)!=chr(137).'png'.chr(13).chr(10).chr(26).chr(10))
+		$this->Error('Not a png file: '.$file);
 
 	// Read header chunk
 	$this->_readstream($f,4);
 	if($this->_readstream($f,4)!='IHDR')
-		$this->Error('Incorrect PNG file: '.$file);
+		$this->Error('Incorrect png file: '.$file);
 	$w = $this->_readint($f);
 	$h = $this->_readint($f);
 	$bpc = ord($this->_readstream($f,1));
@@ -1416,7 +1416,7 @@ protected function _readint($f)
 
 protected function _parsegif($file)
 {
-	// Extract info from a GIF file (via PNG conversion)
+	// Extract info from a GIF file (via png conversion)
 	if(!function_exists('imagepng'))
 		$this->Error('GD extension is required for GIF support');
 	if(!function_exists('imagecreatefromgif'))

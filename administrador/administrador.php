@@ -16,7 +16,7 @@
 	<div class="log">
    	<br>
    	<center>
-          <IMG src="../images/logue.PNG"alt="Smiley face" height="140" width="130">
+          <IMG src="../images/logue.png"alt="Smiley face" height="140" width="130">
       </center>
    </div>
 <div class="caer" style="background: #fff; width: 120px; height: 30px; padding: 5px; margin-left: 90%; border-radius: 10px;
